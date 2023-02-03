@@ -41,7 +41,7 @@ async def get_access_token(url_token: str, data: dict, headers: dict) -> dict:
 
 async def get_accaunt_info(user_id: int):
     url = f'https://api.avito.ru/core/v1/accounts/{user_id}/'
-    headers = {'Authorization': 'Bearer aRzga2v5SNC-R4AvJdoM1g_Ysr0yo5X5YXXz-0vS'}
+    headers = {'Authorization': 'Bearer <your_token>'}
     async with aiohttp.ClientSession() as session:
         async with session.get(url, headers=headers) as resp:
             print(await resp.text())
